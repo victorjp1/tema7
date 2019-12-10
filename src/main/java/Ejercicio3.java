@@ -15,7 +15,7 @@ public class Ejercicio3 {
     }
 
     /**
-     * Número de palabras
+     * Cuenta el número de palabras
      * @param frase Guarda la frase.
      * @return
      */
