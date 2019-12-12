@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-public class Ejercicio4 {
-    public Ejercicio4() {
+public class Ejercicio5 {
+    public Ejercicio5() {
 
         Scanner input = new Scanner(System.in); // El Scanner
         System.out.println("Ingresa una frase: ");
         String frase = input.nextLine(); // Guardamos la frase o texto
-        String[] p = separarFrase(frase); // Separamos palabras
-        for (int i = 0; i < p.length; i++) {
-            System.out.println("Parte " + (i + 1) + ": " + p[i] + ". Tiene " + cuentaVocales(p[i]) + " vocales y " + cuentaConsonantes(p[i]) + " consonantes");
+        String[] palabra = separarFrase(frase); // Separamos palabras
+        for (int i = 0; i < palabra.length; i++) {
+            System.out.println("Parte " + (i + 1) + ": " + palabra[i] + ". Tiene " + cuentaVocales(palabra[i]) + " vocales y " + cuentaConsonantes(palabra[i]) + " consonantes");
         }
         System.out.println("La frase " + frase + " tiene " + cuentaPalabras(frase) + " palabras.");
 
@@ -23,16 +23,16 @@ public class Ejercicio4 {
         int numPalabras = 0; // Cantidad de palabras
 
         // Recorremos en busca de espacios
-            boolean enPalabra = false;//Boolea n que controla si esta en la frase o no.
-            for (int i = 0; i < s.length(); i++){//Bucle que recorre la frase.
-                char c = s.charAt(i);//Guardamos caracter de la posición que indique i.
-                if (Character.isSpaceChar(c) || c == '\n' || c == '\t') {//Si es espacio, salto de línea o tabulacion...
-                    enPalabra = false;//Boolean se pone en false.
-                }else if (!enPalabra){//Si en palabra es falso...
-                    enPalabra = true;//Se pone la boolean en true.
-                    numPalabras++;//Sumamos número de palabras.
-                }
+        boolean enPalabra = false;//Boolea n que controla si esta en la frase o no.
+        for (int i = 0; i < s.length(); i++){//Bucle que recorre la frase.
+            char c = s.charAt(i);//Guardamos caracter de la posición que indique i.
+            if (Character.isSpaceChar(c) || c == '\n' || c == '\t') {//Si es espacio, salto de línea o tabulacion...
+                enPalabra = false;//Boolean se pone en false.
+            }else if (!enPalabra){//Si en palabra es falso...
+                enPalabra = true;//Se pone la boolean en true.
+                numPalabras++;//Sumamos número de palabras.
             }
+        }
 
 
 
@@ -47,7 +47,7 @@ public class Ejercicio4 {
                 ind++; // Pasamos a la siguiente palabra
                 continue; // Próximo i
             }
-            partes[ind] += s.charAt(i); // Sino, agregamos el carácter a la palabra actual
+            partes[i] += s.charAt(i); // Sino, agregamos el carácter a la palabra actual
         }
         return partes; // Devolvemos las partes
     }
@@ -87,6 +87,9 @@ public class Ejercicio4 {
     public  static int cuentaConsonantes (String frase){
 
         int consonantes=0;
+
+
+
         for (int i = 0; i < frase.length(); i++){
             char c = frase.charAt(i);
             if (c < 'A' || c >'z'){
@@ -101,3 +104,4 @@ public class Ejercicio4 {
 
 
 }
+
