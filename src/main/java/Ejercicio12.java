@@ -19,16 +19,22 @@ public class Ejercicio12 {
     /**
      * Método que sustituye una cadena de caracteres por otra
      * @param frase Variable que almacena la frase original
-     * @param aSustituir
-     * @param sustitucion
+     * @param aSustituir Variable que almacena la cadena que se quiere sustituir
+     * @param sustitucion Variable que almacena la cadena por la que se quiere sustituir
      * @return
      */
     public static String sustituirCadena(String frase, String aSustituir, String sustitucion){
         frase = frase.replaceAll(aSustituir, sustitucion);
         return frase;
     }
+
+    /**
+     * Método que sustituye una cadena de números por un asterisco.
+     * @param frase Variable que almacena la frase inicial.
+     * @return
+     */
     public static String sustituirNum(String frase){
-        frase = frase.replaceAll("\\d+", "*");
+        frase = frase.replaceAll("\\d+", "*"); //Reemplazamos.
         return frase;
     }
 }
