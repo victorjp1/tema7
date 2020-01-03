@@ -34,12 +34,11 @@ public class Ejercicio20 {
         return r.nextInt(max - min + 1) + min;
     }
     public static boolean ocurrencia(int[] numeros,int numero){
-        boolean ocurrencia = false;
         for(int i = 0; i < numeros.length; i++){
             if (numero == numeros[i]){
-                ocurrencia = true;
+                return true;
             }
         }
-        return ocurrencia;
+        return false;
     }
 }

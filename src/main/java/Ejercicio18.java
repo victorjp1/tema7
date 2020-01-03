@@ -32,9 +32,14 @@ public class Ejercicio18 {
      * @param resultado array que contiene todos los elementos que almacenarán el resultado de la operación
      */
     public static void sumaArrays(int[] operando1, int[] operando2, int[] resultado){
-        for(int i = 0; i < operando1.length; i++){
-            resultado[i] = operando1[i] + operando2[i];
+        if(operando1.length == operando2.length){
+            for(int i = 0; i < operando1.length; i++){
+                resultado[i] = operando1[i] + operando2[i];
+            }
+        }else{
+            System.out.println("Las longitudes no coinciden!");
         }
+
     }
 
     /**
@@ -45,9 +50,14 @@ public class Ejercicio18 {
      * @param resultado array que contiene todos los elementos que almacenarán el resultado de la operación
      */
     public static void divisionArrays(int[] operando1, int[] operando2, int[] resultado){
-        for(int i = 0; i < operando1.length; i++){
-            resultado[i] = operando1[i] / operando2[i];
+        if (operando1.length == operando2.length){
+            for(int i = 0; i < operando1.length; i++){
+                resultado[i] = operando1[i] / operando2[i];
+            }
+        }else{
+            System.out.println("Las longitudes de los arrays no coinciden");
         }
+
     }
 
     /**
