@@ -25,8 +25,8 @@ public class Ejercicio22 {
      */
     public static int[] pedirArray (int[] a){
         for (int i = 0; i < a.length; i++){
-            System.out.println("Ingrese el elemento " + (i+1));
-            a[i] = lector.nextInt(); lector.nextLine();
+            System.out.println("Ingrese el elemento " + (i+1));//Pedimos el elemento.
+            a[i] = lector.nextInt(); lector.nextLine();//Leemos y guardamos en el elemento.
         }
         return a;
     }
